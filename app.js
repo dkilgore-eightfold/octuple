@@ -1,17 +1,20 @@
-const express = require('express');
-const open = require('open');
 const path = require('path');
-
+const express = require('express');
 const app = express();
+const port = 3000;
 
-app.use(express.static(path.join(__dirname, '/')));
+const { engine } = require('express-handlebars');
+app.set('view engine', 'hbs');
+app.engine('hbs', engine({
+    layoutsDir: path.join(__dirname, './', '/views/layouts'),
+    extname: 'hbs',
+    defaultLayout: 'index',
+    partialsDir: path.join(__dirname, './', '/views/partials')
+    }));
+app.use(express.static(path.join(__dirname, './')));
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
-}).listen(3000);
+app.get('/', (req, res) => {
+    res.render('main', {layout : 'index'});
+});
 
-const start = async function() {
-    await open('http://localhost:3000/');
-}
-
-start();
+app.listen(port, () => console.log(`App listening to port ${port}`));

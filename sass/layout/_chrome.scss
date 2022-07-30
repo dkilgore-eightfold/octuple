@@ -1,0 +1,33 @@
+.oc {
+  .oc-content {
+    padding: 0 1.6rem;
+  }
+
+  hr,
+  .oc-hr {
+    background-color: $divider-line-color;
+    width: 100%;
+  }
+
+  /* BEGIN Responsive Styles */
+
+  @media (min-width: 600px) {
+    .oc-content {
+      padding: 0 2.4rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .oc-content {
+      padding: 0 2.4rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .oc-content {
+      padding: 0 4rem;
+    }
+  }
+
+  /* END Responsive Styles */
+}
