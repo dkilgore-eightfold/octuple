@@ -1,361 +1,197 @@
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../../webfonts/SourceSansPro-Regular.eot');
-  src: url('../../webfonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-Regular.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-Regular.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-Regular.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+html {
+  /* 62.5% of 16px browser font size is 10px. so 1.6rem is 16px - no need for SASS REM converter :) */
+  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen-Sans, Ubuntu,Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 62.5%;
+}
+
+.oc-display {
   font-style: normal;
+  font-weight: $text-font-weight-light;
+  font-size: $text-font-size-11;
+  line-height: $text-line-height-10;
+  letter-spacing: $text-letter-spacing-l;
+  @include content-padding($text-line-height-10);
+
+  &__large {
+    font-size: $text-font-size-12;
+    line-height: $text-line-height-11;
+    letter-spacing: $text-letter-spacing-l;
+    @include content-padding($text-line-height-11);
+  }
+
+  &__medium {
+    font-size: $text-font-size-11;
+    line-height: $text-line-height-10;
+    letter-spacing: $text-letter-spacing-l;
+    @include content-padding($text-line-height-10);
+  }
+
+  &__small {
+    font-size: $text-font-size-10;
+    line-height: $text-line-height-9;
+    letter-spacing: $text-letter-spacing-m;
+    @include content-padding($text-line-height-9);
+  }
+
+  &__extra-small {
+    font-size: $text-font-size-9;
+    line-height: $text-line-height-8;
+    letter-spacing: $text-letter-spacing-m;
+    @include content-padding($text-line-height-8);
+  }
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Black';
-  src: url('../../webfonts/SourceSansPro-Black.eot');
-  src: url('../../webfonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-Black.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-Black.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-Black.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
-  font-style: normal;
+h1,
+.oc-h1 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-8;
+  line-height: $text-line-height-7;
+  letter-spacing: $text-letter-spacing-m;
+  @include content-padding($text-line-height-7);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Black Italic';
-  src: url('../../webfonts/SourceSansPro-BlackItalic.eot');
-  src: url('../../webfonts/SourceSansPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-BlackItalic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-BlackItalic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-BlackItalic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-BlackItalic.svg#SourceSansPro-BlackItalic') format('svg');
-  font-style: italic;
+h2,
+.oc-h2 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-7;
+  line-height: $text-line-height-6;
+  letter-spacing: $text-letter-spacing-xs;
+  @include content-padding($text-line-height-6);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Bold';
-  src: url('../../webfonts/SourceSansPro-Bold.eot');
-  src: url('../../webfonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-Bold.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-Bold.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-Bold.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
-  font-style: normal;
+h3,
+.oc-h3 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-6;
+  line-height: $text-line-height-5;
+  @include content-padding($text-line-height-5);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Bold Italic';
-  src: url('../../webfonts/SourceSansPro-BoldItalic.eot');
-  src: url('../../webfonts/SourceSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-BoldItalic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-BoldItalic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-BoldItalic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-BoldItalic.svg#SourceSansPro-BoldItalic') format('svg');
-  font-style: italic;
+h4,
+.oc-h4 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-5;
+  line-height: $text-line-height-3;
+  @include content-padding($text-line-height-3);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Extra Light';
-  src: url('../../webfonts/SourceSansPro-ExtraLight.eot');
-  src: url('../../webfonts/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-ExtraLight.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-ExtraLight.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-ExtraLight.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-ExtraLight.svg#SourceSansPro-ExtraLight') format('svg');
-  font-style: normal;
+h5,
+.oc-h5 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-3;
+  line-height: $text-line-height-2;
+  @include content-padding($text-line-height-2);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Extra Light Italic';
-  src: url('../../webfonts/SourceSansPro-ExtraLightItalic.eot');
-  src: url('../../webfonts/SourceSansPro-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-ExtraLightItalic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-ExtraLightItalic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-ExtraLightItalic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-ExtraLightItalic.svg#SourceSansPro-ExtraLightItalic') format('svg');
-  font-style: italic;
+h6,
+.oc-h6 {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-2;
+  line-height: $text-line-height-2;
+  @include content-padding($text-line-height-2);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Italic';
-  src: url('../../webfonts/SourceSansPro-Italic.eot');
-  src: url('../../webfonts/SourceSansPro-Italic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-Italic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-Italic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-Italic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-Italic.svg#SourceSansPro-Italic') format('svg');
-  font-style: italic;
+.oc-subtitle {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-6;
+  line-height: $text-line-height-5;
+  letter-spacing: $text-letter-spacing-xs;
+  @include content-padding($text-line-height-5);
+
+  &__large {
+    font-weight: $text-font-weight-light;
+    font-size: $text-font-size-7;
+    line-height: $text-line-height-6;
+    letter-spacing: $text-letter-spacing-s;
+    @include content-padding($text-line-height-6);
+  }
+
+  &__medium {
+    font-weight: $text-font-weight-semibold;
+    font-size: $text-font-size-6;
+    line-height: $text-line-height-5;
+    letter-spacing: $text-letter-spacing-xs;
+    @include content-padding($text-line-height-5);
+  }
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Light';
-  src: url('../../webfonts/SourceSansPro-Light.eot');
-  src: url('../../webfonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-Light.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-Light.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-Light.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
-  font-style: normal;
+.oc-pre-display {
+  font-weight: $text-font-weight-semibold;
+  font-size: $text-font-size-5;
+  line-height: $text-line-height-4;
+  text-transform: uppercase;
+  @include content-padding($text-line-height-4);
 }
 
-@font-face {
-  font-family: 'Source Sans Pro Light Italic';
-  src: url('../../webfonts/SourceSansPro-LightItalic.eot');
-  src: url('../../webfonts/SourceSansPro-LightItalic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-LightItalic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-LightItalic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-LightItalic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-LightItalic.svg#SourceSansPro-LightItalic') format('svg');
-  font-style: italic;
-}
+body,
+p,
+.oc-content {
+  font-weight: $text-font-weight-regular;
+  font-size: $text-font-size-3;
+  line-height: $text-line-height-3;
+  @include content-padding($text-line-height-3);
 
-@font-face {
-  font-family: 'Source Sans Pro SemiBold';
-  src: url('../../webfonts/SourceSansPro-SemiBold.eot');
-  src: url('../../webfonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-SemiBold.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-SemiBold.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-SemiBold.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Source Sans Pro SemiBold Italic';
-  src: url('../../webfonts/SourceSansPro-SemiBoldItalic.eot');
-  src: url('../../webfonts/SourceSansPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-      url('../../webfonts/SourceSansPro-SemiBoldItalic.woff2') format('woff2'),
-      url('../../webfonts/SourceSansPro-SemiBoldItalic.woff') format('woff'),
-      url('../../webfonts/SourceSansPro-SemiBoldItalic.ttf') format('truetype'),
-      url('../../webfonts/SourceSansPro-SemiBoldItalic.svg#SourceSansPro-SemiBoldItalic') format('svg');
-  font-style: italic;
-}
-
-.display1
-{ // Display 1
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-light;
-font-size: $text-font-size-12;
-line-height: $text-line-height-11;
-letter-spacing: $text-letter-spacing-l;
-}
-
-.display2
-{ // Display 2
-font-family: Source Sans Pro Light;
-font-weight: $text-font-weight-light;
-font-size: $text-font-size-11;
-line-height: $text-line-height-10;
-letter-spacing: $text-letter-spacing-l;
-}
-
-.display3
-{ // Display 3
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-10;
-line-height: $text-line-height-9;
-letter-spacing: $text-letter-spacing-m;
-}
-
-.display4
-{ // Display 4
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-9;
-line-height: $text-line-height-8;
-letter-spacing: $text-letter-spacing-m;
-}
-
-.header1
-{ // Header 1
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-8;
-line-height: $text-line-height-7;
-letter-spacing: $text-letter-spacing-m;
-}
-
-.header2
-{ // Header 2
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-7;
-line-height: $text-line-height-6;
-letter-spacing: $text-letter-spacing-xs;
-}
-
-.header3
-{ // Header 3
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-6;
-line-height: $text-line-height-5;
-}
-
-.header4
-{ // Header 4
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-5;
-line-height: $text-line-height-3;
-}
-
-.header5
-{ // Header 5
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-3;
-line-height: $text-line-height-2;
-}
-
-.header6
-{ // Header 5
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-2;
-line-height: $text-line-height-2;
-}
-
-.subtitle1
-{ // Subtitle 1
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-7;
-line-height: $text-line-height-6;
-letter-spacing: $text-letter-spacing-s;
-}
-
-.subtitle2
-{ // Subtitle 2
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-6;
-line-height: $text-line-height-5;
-letter-spacing: $text-letter-spacing-xs;
-}
-
-.pre-display
-{ // Pre-Dsiplay
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-5;
-line-height: $text-line-height-4;
-text-transform: uppercase;
-}
-
-.button1
-{ // Button 1 (Mobile L)
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-5;
-line-height: $text-line-height-3;
-
-&.open-sans{
-  font-family: "Open Sans", sans-serif;
-}
-}
-
-.button2
-{ // Button 2 (Mobile M, Desktop L)
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-3;
-line-height: $text-line-height-2;
-
-&.open-sans{
-  font-family: "Open Sans", sans-serif;
-}
-}
-
-.button3
-{ // Button 3 (Desktop M)
-font-family: Source Sans Pro SemiBold;
-font-weight: $text-font-weight-semibold;
-font-size: $text-font-size-2;
-line-height: $text-line-height-1;
-
-&.open-sans{
-  font-family: "Open Sans", sans-serif;
-}
-}
-
-.body1
-{ // Body 1 (Mobile L)
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-4;
-line-height: $text-line-height-3;
-
-  &.semibold{
+  &.semibold {
     font-weight: $text-font-weight-semibold;
   }
 
-  &.open-sans{
-    font-family: "Open Sans", sans-serif;
+  a,
+  .oc-link {
+    &__primary {
+        color: var(--primary-color);
+    }
+  }
+
+  &__large {
+    font-size: $text-font-size-4;
+    line-height: $text-line-height-3;
+    @include content-padding($text-line-height-3);
+  }
+
+  &__medium {
+    font-size: $text-font-size-3;
+    line-height: $text-line-height-3;
+    @include content-padding($text-line-height-3);
+  }
+
+  &__small {
+    font-size: $text-font-size-2;
+    line-height: $text-line-height-2;
+    @include content-padding($text-line-height-2);
   }
 }
 
-.body2
-{ // Body 2 (Mobile M, Desktop L)
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-3;
-line-height: $text-line-height-3;
+label,
+.oc-label {
+  font-weight: $text-font-weight-semibold;
+}
 
-  &.semibold{
-    font-weight: $text-font-weight-semibold;
+caption,
+.oc-caption {
+  font-weight: $text-font-weight-regular;
+  font-size: $text-font-size-1;
+  line-height: $text-line-height-1;
+  @include content-padding($text-line-height-1);
+}
+
+i,
+.oc-icon {
+  font-family: Material Design Icons;
+  font-size: $icon-font-size-material-m;
+
+  &__large {
+    font-size: $icon-font-size-material-l;
   }
 
-  &.open-sans{
-    font-family: "Open Sans", sans-serif;
-  }
-}
-
-.body3
-{ // Body 3 (Desktop M)
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-2;
-line-height: $text-line-height-2;
-
-  &.semibold{
-    font-family: Source Sans Pro SemiBold;
-    font-weight: $text-font-weight-semibold;
+  &__medium {
+    font-size: $icon-font-size-material-m;
   }
 
-  &.open-sans{
-    font-family: "Open Sans", sans-serif;
+  &__small {
+    font-size: $icon-font-size-material-s;
   }
-}
 
-.caption
-{ // Caption
-font-family: Source Sans Pro;
-font-weight: $text-font-weight-regular;
-font-size: $text-font-size-1;
-line-height: $text-line-height-1;
-}
-
-.icon-material-l
-{
-font-family: Material Design Icons;
-font-size: $icon-font-size-material-l;
-}
-
-.icon-material-m
-{
-font-family: Material Design Icons;
-font-size: $icon-font-size-material-m;
-}
-
-.icon-material-s
-{
-font-family: Material Design Icons;
-font-size: $icon-font-size-material-s;
-}
-
-.icon-material-xs
-{
-font-family: Material Design Icons;
-font-size: $icon-font-size-material-xs;
+  &__extra-small {
+    font-size: $icon-font-size-material-xs;
+  }
 }

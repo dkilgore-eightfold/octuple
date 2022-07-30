@@ -1,0 +1,252 @@
+// BEGIN: VARIABLE COLOR DEFINITIONS
+
+$color-background1-red: var(--red-color-10);
+$color-background1-orange: var(--orange-color-10);
+$color-background1-yellow: var(--yellow-color-10);
+$color-background1-green: var(--green-color-10);
+$color-background1-blue-green: var(--bluegreen-color-10);
+$color-background1-blue: var(--blue-color-10);
+$color-background1-violet: var(--violet-color-10);
+$color-background1-grey: var(--grey-color-10);
+
+$color-background2-red: var(--red-color-20);
+$color-background2-orange: var(--orange-color-20);
+$color-background2-yellow: var(--yellow-color-20);
+$color-background2-green: var(--green-color-20);
+$color-background2-blue-green: var(--bluegreen-color-20);
+$color-background2-blue: var(--blue-color-20);
+$color-background2-violet: var(--violet-color-20);
+$color-background2-grey: var(--grey-color-20);
+
+$color-background3-red: var(--red-color-30);
+$color-background3-orange: var(--orange-color-30);
+$color-background3-yellow: var(--yellow-color-30);
+$color-background3-green: var(--green-color-30);
+$color-background3-blue-green: var(--bluegreen-color-30);
+$color-background3-blue: var(--blue-color-30);
+$color-background3-violet: var(--violet-color-30);
+$color-background3-grey: var(--grey-color-30);
+
+$color-primary-red: var(--red-color-80);
+$color-primary-orange: var(--orange-color-80);
+$color-primary-yellow: var(--yellow-color-80);
+$color-primary-green: var(--green-color-80);
+$color-primary-blue-green: var(--bluegreen-color-80);
+$color-primary-blue: var(--blue-color-80);
+$color-primary-violet: var(--violet-color-80);
+$color-primary-grey: var(--grey-color-80);
+
+$color-secondary-red: var(--red-color-70);
+$color-secondary-orange: var(--orange-color-70);
+$color-secondary-yellow: var(--yellow-color-70);
+$color-secondary-green: var(--green-color-70);
+$color-secondary-blue-green: var(--bluegreen-color-70);
+$color-secondary-blue: var(--blue-color-70);
+$color-secondary-violet: var(--violet-color-70);
+$color-secondary-grey: var(--grey-color-70);
+
+$color-tertiary-red: var(--red-color-60);
+$color-tertiary-orange: var(--orange-color-60);
+$color-tertiary-yellow: var(--yellow-color-60);
+$color-tertiary-green: var(--green-color-60);
+$color-tertiary-blue-green: var(--bluegreen-color-60);
+$color-tertiary-blue: var(--blue-color-60);
+$color-tertiary-violet: var(--violet-color-60);
+$color-tertiary-grey: var(--grey-color-60);
+
+$text-color-primary: var(--grey-color-90);
+$text-color-secondary: var(--grey-color-80);
+
+$background-color-white: var(--background-color);
+
+$divider-line-color: var(--grey-color-40);
+
+// END: VARIABLE COLOR DEFINITIONS
+
+// BEGIN: CONSTANTS
+
+// Typography Definitions
+
+$text-font-size-1: 1.2rem;
+$text-font-size-2: 1.4rem;
+$text-font-size-3: 1.6rem;
+$text-font-size-4: 1.8rem;
+$text-font-size-5: 2rem;
+$text-font-size-6: 2.4rem;
+$text-font-size-7: 3.2rem;
+$text-font-size-8: 4rem;
+$text-font-size-9: 5.6rem;
+$text-font-size-10: 6.4rem;
+$text-font-size-11: 8rem;
+$text-font-size-12: 9.6rem;
+
+$text-line-height-1: 1.6rem;
+$text-line-height-2: 2rem;
+$text-line-height-3: 2.4rem;
+$text-line-height-4: 2.8rem;
+$text-line-height-5: 3.2rem;
+$text-line-height-6: 4rem;
+$text-line-height-7: 4.8rem;
+$text-line-height-8: 6.4rem;
+$text-line-height-9: 7.2rem;
+$text-line-height-10: 9.6rem;
+$text-line-height-11: 11.2rem;
+$text-line-height-12: 12rem;
+
+$text-font-weight-extra-light: 200;
+$text-font-weight-light: 300;
+$text-font-weight-regular: 400;
+$text-font-weight-semibold: 600;
+$text-font-weight-bold: 700;
+$text-font-weight-black: 900;
+
+$text-letter-spacing-xs: -0.016rem;
+$text-letter-spacing-s: -0.024rem;
+$text-letter-spacing-m: -0.02rem;
+$text-letter-spacing-l: -0.03rem;
+
+// Icon Definitions
+
+$icon-font-size-material-xs: 1.4rem;
+$icon-font-size-material-s: 1.6rem;
+$icon-font-size-material-m: 2rem;
+$icon-font-size-material-l: 2.4rem;
+
+// Gradient Definitions
+
+$eightfold-logo-gradient: linear-gradient(
+    90deg,
+    #3186c8 0.01%,
+    #269fca 18.01%,
+    #1db4cc 38.02%,
+    #1abbcd 50.02%,
+    #6fc6aa 100.03%
+);
+
+// Shadow Definitions
+
+$shadow-object-xs: 0px 1px 2px rgba(15, 20, 31, 0.12);
+$shadow-object-s: 0px 1px 2px rgba(15, 20, 31, 0.12),
+    0px 1px 4px rgba(15, 20, 31, 0.16); // Smallest UI object like tooltips.
+$shadow-object-m: 0px 1px 2px rgba(15, 20, 31, 0.12),
+    0px 2px 8px rgba(15, 20, 31, 0.16); // UI objects like card, dropdown menu, etc
+$shadow-object-l: 0px 1px 2px rgba(15, 20, 31, 0.12),
+    0px 4px 16px rgba(15, 20, 31, 0.16); // Large UI objects like popover, dialog, etc
+$shadow-object-xl: 0px 1px 2px rgba(15, 20, 31, 0.12),
+    0px 8px 32px rgba(15, 20, 31, 0.16); // Largest UI objects like modal, slide-in panel, etc
+$shadow-panel-right: -1px 0px 2px rgba(15, 20, 31, 0.12),
+    -8px 0px 32px rgba(15, 20, 31, 0.16);
+$shadow-panel-behind: 0px -4px 16px rgba(0, 0, 0, 0.12);
+
+// Spacing Definitions
+
+$space-xxxs: 0.2rem;
+$space-xxs: 0.4rem;
+$space-xs: 0.8rem;
+$space-s: 1.2rem;
+$space-m: 1.6rem;
+$space-ml: 2rem;
+$space-l: 2.4rem;
+$space-xl: 3.2rem;
+$space-xxl: 4rem;
+$space-xxxl: 6.4rem;
+
+$button-padding-vertical-large: 1rem;
+$button-padding-horizontal-large: 1.4rem;
+$button-spacer-large: 0.8rem;
+
+$button-padding-vertical-medium: 0.8rem;
+$button-padding-horizontal-medium: 1.2rem;
+$button-spacer-medium: 0.6rem;
+
+$button-padding-vertical-small: 0.6rem;
+$button-padding-horizontal-small: 1rem;
+$button-spacer-small: 0.4rem;
+
+// Corner-radius Definitions
+
+$corner-radius-xs: 0.2rem;
+$corner-radius-s: 0.4rem;
+$corner-radius-m: 0.8rem;
+$corner-radius-l: 1.6rem;
+$corner-radius-xl: 2.4rem;
+
+// Focus visible Definitions
+
+$focus-visible-shadow-color: var(--blueviolet-color-50);
+$focus-visible-shadow-width: 0.2rem;
+$focus-visible-box-shadow: 0 0 0 $focus-visible-shadow-width
+    $focus-visible-shadow-color;
+
+// Speed / Duration Definitions
+
+$motion-duration-extra-fast: 200ms; // Smallest UI objects like buttons (hover effect), tooltips, etc.
+$motion-duration-fast: 400ms; // Small UI object like dialogs, notifications, dropdowns, instructional tooltips, etc.
+$motion-duration-normal: 600ms; // UI objects like card, popover, etc.
+$motion-duration-slow: 800ms; // Large UI objects like alert banners, modals, etc
+$motion-duration-extra-slow: 1000ms; // Largest UI objects like slide-in panels, page transitions, etc.
+
+// Easing Definitions
+
+$motion-easing-easeout: cubic-bezier(
+    0,
+    0,
+    0.58,
+    1
+); // EaseOut is used when an element is appearing on-screen or within a component
+$motion-easing-easein: cubic-bezier(
+    0.42,
+    0,
+    1,
+    1
+); // EaseIn is used when an element is removed from the screen or within a component
+$motion-easing-easeinout: cubic-bezier(
+    0.42,
+    0,
+    0.58,
+    1
+); // The primary easing curve. Used for any core animation not entering/exiting the screen or a component
+$motion-ease-in-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$motion-ease-out-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+
+// Movement Definitions
+
+$motion-movement-s: 8px; // Used in animations involving parts of a component
+$motion-movement-m: 16px; // Used in animations of smaller components
+$motion-movement-l: 24px; // Used in animations of larger components
+$motion-movement-xl: 32px; // Used in animations involving the largest components
+
+// Delay Definitions
+
+$motion-delay-s: 80ms; // Used in animations within components
+$motion-delay-m: 120ms; // Used in animations of smaller components
+$motion-delay-l: 160ms; // Used in animations of larger components
+$motion-delay-xl: 200ms; // Used in animations involving multiple components
+
+// Disabled Definitions
+
+$disabled-alpha-value: 0.3;
+$disabled-zero: 0;
+
+// Z-index Definitions
+
+$z-index-auto: auto;
+$z-index-top: 99999; //this is a super weapon. use it wisely.
+$z-index-500: 500; //warning and alerts. needs to be on top of all the components
+$z-index-400: 400;
+$z-index-300: 300;
+$z-index-200: 200;
+$z-index-100: 100; //dropdown menu, tooltip, etc
+$z-index-0: 0;
+$z-index-bottom: -100;
+
+$all-backdrops: rgba(0, 0, 0, 0.5);
+
+// Breakpoints
+
+$large-screen-size: 1200px;
+$medium-screen-size: 900px;
+$small-screen-size: 600px;
+$xsmall-screen-size: 0;
+
+// END: CONSTANTS
